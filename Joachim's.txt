@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+
+                		theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Joachim’s Consult</title>
+    <meta name="title" content="ECODE" />
+    <meta
+      name="description"
+      content="This is a business agency page made by philipsteward"
+    />
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-bg.jpg" />
+    <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg" />
+    <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg" />
+    <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg" />
+  </head>
+
+  <body>
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <h2 style="color: black; font-family: sans-serif">
+            <div style="font-weight: bold;
+          position: absolute;
+          top: 41%;
+          left: 30%;
+          transform: translate(-50%, -50%);
+          color:rgb(255, 255, 255);
+          font-size:24px;
+          font-weight: bold;
+          text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.829);">
+          Joachim’s Consult
+        </div>
+          <img src="./assets/images/logo1.jpg" width="70" height="70">
+          
+          </h2>
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <h2 style="color: white; font-family: 'Times New Roman', Times, serif; font-weight: bold;">
+                Joachim’s Consult
+              </h2>
+            </a>
+
+            <button
+              class="nav-close-btn"
+              aria-label="close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link" style="color: rgb(119, 192, 240)"
+                >Home</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" style="color: rgb(119, 192, 240);">About</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" style="color: rgb(119, 192, 240)">Projects</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" style="color: rgb(119, 192, 240)">Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" style="color: rgb(119, 192, 240)">Contact</a>
+            </li>
+          </ul>
+
+          <div class="wrapper">
+            <a href="mailto:ecodeportfolio@gmail.com" class="contact-link"
+              >philipsteward8@gmail.com</a
+            >
+
+            <a href="tel:+233256685628" class="contact-link"
+              >+233207111330</a
+            >
+          </div>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkden"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.facebook.com/joachim.asamoah" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-dribbble"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="btn btn-primary">Join Us</a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+      <body ><main>
+          <article>
+            <!-- 
+            - #HERO
+          -->
+    
+            <section
+              class="section hero has-bg-image"
+              aria-label="home"
+              style="background-color: cornflowerblue;;"
+            >
+              <div class="container">
+                <div class="hero-content">
+                  <h1 class="h1 hero-title">
+                   Financial 
+                    intelligence, Customer service, 
+                     sales, and many more </h1>
+                  <p class="hero-text">
+                    We  provide training
+consultancy dedicated to
+fostering organizational growth,
+restructuring, and excellence in
+finance and banking.
+                  </p>
+    
+                  <div class="btn-wrapper">
+                    <a href="#" class="btn btn-primary">Explore Now</a>
+    
+                    <a href="#" class="btn btn-outline">Contact Us</a>
+                  </div>
+                </div>
+    
+                <div class="hero-slider" data-slider>
+                  <div class="slider-inner">
+                    <ul class="slider-container" data-slider-container>
+                      <li class="slider-item">
+                        <figure
+                          class="img-holder"
+                          style="--width: 575; --height: 550"
+                        >
+                          <img
+                            src="./assets/images/1212.jpg"
+                            width="575"
+                            height="550"
+                            alt=""
+                            class="img-cover"
+                          />
+                        </figure>
+                      </li>
+    
+                      <li class="slider-item">
+                        <div class="hero-card">
+                          <figure
+                            class="img-holder"
+                            style="--width: 575; --height: 550"
+                          >
+                           <img
+                              src="./assets/images/12.jpg"
+                              width="575"
+                              height="550"
+                              alt="hero banner"
+                              class="img-cover"
+                            />
+                       
+                          </figure>
+                          <a href="https://www.linkedin.com/in/joachim-asamoah-97739132?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                           
+                          <button class="play-btn" aria-label="play adex intro">
+                            <ion-icon name="play" aria-hidden="true"></ion-icon>
+                          </button>
+                        </a>
+                        </div>
+                      </li>
+    
+                      <li class="slider-item">
+                        <figure
+                          class="img-holder"
+                          style="--width: 575; --height: 550"
+                        >
+                          <img
+                            src="./assets/images/14.jpg"
+                            width="575"
+                            height="550"
+                            alt=""
+                            class="img-cover"
+                          />
+                        </figure>
+                      </li>
+                    </ul>
+                  </div>
+    
+                  <button
+                    class="slider-btn prev"
+                    aria-label="slide to previous"
+                    data-slider-prev
+                  >
+                    <ion-icon name="arrow-back"></ion-icon>
+                  </button>
+    
+                  <button
+                    class="slider-btn next"
+                    aria-label="slide to next"
+                    data-slider-next
+                  >
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+
+             <!-- 
+            - #STATS
+          -->
+  
+   <div style="
+        text-align: center;
+        font-size: 2rem; /* Default font size */
+        padding: 0px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        color: #333;
+        transition: font-size 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        ">
+        <a href="coin.html">
+        New services - <span style="
+            color: #00bfff; /* TikTok blue */
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            ">TikTok</span>
+            </a>
+    </div>
+
+    
+
+    
+          <section class="stats" aria-label="our stats"
+          style="margin-top: 100px;">
+            <div class="container">
+              <ul
+                class="stats-card has-bg-image"
+                style="background-image: url('./assets/images/12.jpg')"
+              >
+                <li>
+                  <p class="card-text" style="background-color: rgb(255, 174, 0);
+                  border-radius: 5px;">
+                   <a href="coin.html"><span class="h1" style="color: white; font-family: Georgia, 'Times New Roman', Times, serif;">....</span>
+  
+                    <spna class="span">Data Analytics>>></spna>
+                   </a>
+                  </p>
+                </li>
+  <!--htghj
+                <li>
+                  <p class="card-text" style="background-color: black;">
+                    <span class="h1">eCOINS</span>
+  
+                    <spna class="span">Happy Customers</spna>
+                  </p>
+                </li>
+  
+                <li>
+                  <p class="card-text" style="background-color: black;">
+                    <span class="h1">2184</span>
+  
+                    <spna class="span">Expert Employees</spna>
+                  </p>
+                </li>
+  
+                <li>
+                  <p class="card-text" style="background-color: black;">
+                    <span class="h1">4523</span>
+  
+                    <spna class="span">Awards Won</spna>
+                  </p>
+                </li>
+                
+                
+                
+              -->
+              </ul>
+            </div>
+          </section>
+  
+    
+            <!-- 
+            - #SERVICE
+          -->
+    
+            <section class="section service" aria-labelledby="service-label">
+              <div class="container">
+                <p class="section-subtitle" id="service-label">What We Do?</p>
+    
+                <h2 class="h2 section-title">
+                  The service we offer is specifically designed to meet your needs.
+                </h2>
+    
+                <ul class="grid-list">
+                  <li>
+                    <div class="service-card">
+                      <div class="card-icon">
+                        <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                      </div>
+    
+                      <h3 class="h4 card-title" style="color: white">
+                        24/7 Support
+                      </h3>
+    
+                      <p class="card-text" style="color: white">
+                        Reliable 24/7 contact support ensuring your needs are met.
+                      </p>
+    
+                      <a href="#" class="btn-text">
+                        <span class="span" style="color: white">Learn More</span>
+    
+                        <ion-icon
+                          name="arrow-forward-outline"
+                          aria-hidden="true"
+                          style="color: white"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+    
+                  <li>
+                    <div class="service-card">
+                      <div class="card-icon">
+                        <ion-icon
+                          name="shield-checkmark-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </div>
+    
+                      <h3 class="h4 card-title" style="color: white">
+                        Secure Payments
+                      </h3>
+    
+                      <p class="card-text" style="color: white">
+                        Ensuring secure, reliable payments with top-notch protection
+                        guaranteed.
+                      </p>
+    
+                      <a href="#feautre-label"  class="btn-text">
+                        <span class="span" style="color: white">Learn More</span>
+    
+                        <ion-icon
+                          name="arrow-forward-outline"
+                          aria-hidden="true"
+                          style="color: white"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+    
+                  <li>
+                    <div class="service-card">
+                      <div class="card-icon">
+                        <ion-icon
+                          name="cloud-download-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </div>
+    
+                      <h3 class="h4 card-title" style="color: white">
+                        Daily Updates
+                      </h3>
+    
+                      <p class="card-text" style="color: white">
+                        Daily service update: All systems operational and performing
+                        optimally.
+                      </p>
+    
+                      <a href="#" class="btn-text">
+                        <span class="span" style="color: white">Learn More</span>
+    
+                        <ion-icon
+                          name="arrow-forward-outline"
+                          aria-hidden="true"
+                          style="color: white"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+    
+                  <li>
+                    <div class="service-card">
+                      <div class="card-icon">
+                        <ion-icon
+                          name="pie-chart-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+                      </div>
+    
+                      <h3 class="h4 card-title" style="color: white">
+                        Market Research
+                      </h3>
+    
+                      <p class="card-text" style="color: white">
+                        Delivering insightful and actionable market research to
+                        drive strategic business decisions.
+                      </p>
+    
+                      <a href="#" class="btn-text">
+                        <span class="span" style="color: white">Learn More</span>
+    
+                        <ion-icon
+                          name="arrow-forward-outline"
+                          aria-hidden="true"
+                          style="color: white"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+    
+            <!-- 
+            - #ABOUT
+          -->
+    
+            <section class="about" aria-labelledby="about-label">
+              <div class="container">
+                <figure class="about-banner">
+                  <img
+                    src="./assets/images/about-banner.png"
+                    width="800"
+                    height="580"
+                    loading="lazy"
+                    alt="about banner"
+                    class="w-100"
+                  />
+                </figure>
+    
+                <div class="about-content">
+                  <p class="section-subtitle" id="about-label">Why Choose Us?</p>
+    
+                  <h2 class="h2 section-title">
+                    We bring solutions to make life easier for our clients.
+                  </h2>
+    
+                  <ul>
+                    <li class="about-item">
+                      <div class="accordion-card expanded" data-accordion>
+                        <h3 class="card-title">
+                          <button class="accordion-btn" data-accordion-btn>
+                            <ion-icon
+                              name="chevron-down-outline"
+                              aria-hidden="true"
+                              class="down"
+                            ></ion-icon>
+    
+                            <spna class="span h5">Collaborative Approach</spna>
+                          </button>
+                        </h3>
+    
+                        <p class="accordion-content">
+                          We view our clients as partners. Our collaborative process involves you at every stage,
+                           from initial concept to final delivery, 
+                          ensuring that the end result aligns perfectly with your vision and requirements.
+                        </p>
+                      </div>
+                    </li>
+    
+                    <li class="about-item">
+                      <div class="accordion-card" data-accordion>
+                        <h3 class="card-title">
+                          <button class="accordion-btn" data-accordion-btn>
+                            <ion-icon
+                              name="chevron-down-outline"
+                              aria-hidden="true"
+                              class="down"
+                            ></ion-icon>
+    
+                            <spna class="span h5">Cutting-Edge Technology</spna>
+                          </button>
+                        </h3>
+    
+                        <p class="accordion-content">
+                          We leverage the latest technologies and tools to ensure that our solutions are 
+                          at the forefront of innovation.
+                           Our commitment to staying updated with tech trends means you benefit from the 
+                           most advanced and effective solutions.
+                        </p>
+                      </div>
+                    </li>
+    
+                    <li class="about-item">
+                      <div class="accordion-card" data-accordion>
+                        <h3 class="card-title">
+                          <button class="accordion-btn" data-accordion-btn>
+                            <ion-icon
+                              name="chevron-down-outline"
+                              aria-hidden="true"
+                              class="down"
+                            ></ion-icon>
+    
+                            <spna class="span h5">Passion for Innovation</spna>
+                          </button>
+                        </h3>
+    
+                        <p class="accordion-content">
+                          We are passionate about pushing boundaries and exploring new possibilities. 
+                          Our team is driven by a love for 
+                          innovation and a commitment to helping you achieve your goals through creative 
+                          and effective solutions.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+    
+            <!-- 
+            - #FEATURE
+          -->
+    
+            <section class="section feature" aria-labelledby="feature-label">
+              <div class="container">
+                <figure class="feature-banner">
+                  <img
+                    src="./assets/images/MTN.jpg"
+                    width="800"
+                    height="531"
+                    loading="lazy"
+                    alt="feature banner"
+                    class="w-100"
+                  />
+                </figure>
+    
+                <div class="feature-content" >
+                  <p class="section-subtitle">Our Solutions </p>
+    
+                  <h2 class="h2 section-title">
+                    We make your spending stress-free for you to have the perfect
+                    control.
+                  </h2>
+    
+                  <p class="section-text">
+                    At Joachim's Consult, we specialize in empowering individuals
+                    and organisations through tailored training and Development
+                    programs. Our expertise spans various areas, ensuring growth, 
+                    efficiency, and success.
+                     
+                  
+                  </p>
+    
+                  <ul class="feature-list">
+                    <li>
+                      <div class="feature-card">
+                        <div class="card-icon">
+                          <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                        </div>
+    
+                        <span class="span">
+                          Coaching and mentoring 
+                        </span>
+                      </div>
+                    </li>
+    
+                    <li>
+                      <div class="feature-card">
+                        <div class="card-icon">
+                          <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                        </div>
+    
+                        <span class="span">
+                           Financial literacy 
+                        </span>
+                      </div>
+                    </li>
+    
+                    <li>
+                      <div class="feature-card">
+                        <div class="card-icon">
+                          <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                        </div>
+    
+                        <span class="span">
+                          Line Management.
+                        </span>
+                      </div>
+                    </li>
+    
+                    <li>
+                      <div class="feature-card">
+                        <div class="card-icon">
+                          <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                        </div>
+    
+                        <span class="span">
+                          Stress Management.
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+    
+            <!-- 
+            - #STATS
+          -->
+    
+            <section class="stats" aria-label="our stats">
+              <div class="container">
+                <ul
+                  class="stats-card has-bg-image"
+                  style="background-image: url('./assets/images/stats-bg.jpg')"
+                >
+                  <li>
+                    <p class="card-text">
+                      <span class="h1">7518</span>
+    
+                      <spna class="span">Completed Projects</spna>
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p class="card-text">
+                      <span class="h1">3472</span>
+    
+                      <spna class="span">Happy Customers</spna>
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p class="card-text">
+                      <span class="h1">2184</span>
+    
+                      <spna class="span">Expert Employees</spna>
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p class="card-text">
+                      <span class="h1">4523</span>
+    
+                      <spna class="span">Awards Won</spna>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </section>
+    
+            <!-- 
+            - #PROJECT
+          -->
+    
+            <section class="section project" aria-labelledby="project-label">
+              <div class="container">
+                <p class="section-subtitle" id="project-label">Case Studies</p>
+    
+                <h2 class="h2 section-title">
+                  Check out some of our awesome projects with creative ideas and
+                  great design.
+                </h2>
+    
+                <ul class="grid-list">
+                  <li>
+                    <div class="project-card">
+                      <figure
+                        class="card-banner img-holder"
+                        style="--width: 560; --height: 350"
+                      >
+                        <img
+                          src="./assets/images/blog-2.jpg"
+                          width="560"
+                          height="350"
+                          loading="lazy"
+                          alt="Ligula tristique quis risus"
+                          class="img-cover"
+                        />
+                      </figure>
+    
+                      <div class="card-content">
+                        <h3 class="h3">
+                          <a href="#" class="card-title">Sales and customer service</a>
+                        </h3>
+    
+                        <p class="card-text">
+                          
+                        </p>
+    
+                        <ul class="card-meta-list">
+                          <li class="card-meta-item">
+                            <ion-icon
+                              name="calendar-outline"
+                              aria-hidden="true"
+                            ></ion-icon>
+    
+                            <time class="meta-text" datetime="2022-04-14"
+                              >14 Apr 2022</time
+                            >
+                          </li>
+    
+                          <li class="card-meta-item">
+                            <ion-icon
+                              name="document-text-outline"
+                              aria-hidden="true"
+                            ></ion-icon>
+    
+                            <span class="meta-text">Workspace</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+    
+                  <li>
+                    <div class="project-card">
+                      <figure
+                        class="card-banner img-holder"
+                        style="--width: 560; --height: 350"
+                      >
+                        <img
+                          src="./assets/images/blog-1.jpg"
+                          width="560"
+                          height="350"
+                          loading="lazy"
+                          alt="Nullam id dolor elit id nibh"
+                          class="img-cover"
+                        />
+                      </figure>
+    
+                      <div class="card-content">
+                        <h3 class="h3">
+                          <a href="#" class="card-title">Web Development</a>
+                        </h3>
+    
+                        <p class="card-text">
+                         
+                        </p>
+    
+                        <ul class="card-meta-list">
+                          <li class="card-meta-item">
+                            <ion-icon
+                              name="calendar-outline"
+                              aria-hidden="true"
+                            ></ion-icon>
+    
+                            <time class="meta-text" datetime="2022-03-29"
+                              >29 Mar 2022</time
+                            >
+                          </li>
+    
+                          <li class="card-meta-item">
+                            <ion-icon
+                              name="document-text-outline"
+                              aria-hidden="true"
+                            ></ion-icon>
+    
+                            <span class="meta-text">Coding</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+    
+                  <li>
+                    <div class="project-card">
+                      <figure
+                        class="card-banner img-holder"
+                        style="--width: 560; --height: 350"
+                      >
+                        <img
+                          src="./assets/images/blog-3.jpg"
+                          width="560"
+                          height="350"
+                          loading="lazy"
+                          alt="Ultricies fusce porta elit"
+                          class="img-cover"
+                        />
+                      </figure>
+    
+                      <div class="card-content">
+                        <h3 class="h3">
+                          <a href="#" class="card-title">People's management</a>
+                        </h3>
+    
+                        <p class="card-text">
+                          
+                        </p>
+    
+                        <ul class="card-meta-list">
+                          <li class="card-meta-item">
+                            <ion-icon
+                              name="calendar-outline"
+                              aria-hidden="true"
+                            ></ion-icon>
+    
+                            <time class="meta-text" datetime="2022-02-26"
+                              >26 Feb 2022</time
+                            >
+                          </li>
+    
+                          <li class="card-meta-item">
+                            <ion-icon
+                              name="document-text-outline"
+                              aria-hidden="true"
+                            ></ion-icon>
+    
+                            <span class="meta-text">Meeting</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+    
+            <!-- 
+            - #CTA
+          -->
+    
+            <section class="cta" aria-label="call to action">
+              <div class="container">
+                <h2 class="h2 section-title">
+                  Join our community by using our services and grow your business.
+                </h2>
+    
+                <a href="#news" class="btn btn-primary">Subscribe Now </a>
+              </div>
+            </section>
+          </article>
+        </main>
+        </body>
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="container grid-list">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <h2 style="color: white">Joachim’s Consult.</h2>
+          </a>
+
+          <p class="footer-text">
+            &copy; 2023 Joachim’s Consult. <br />
+            All rights reserved.
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-dribbble"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="h4 footer-list-title">Get in Touch</p>
+          </li>
+
+          <li>
+            <address class="footer-text">ASAFO, KUMASI, GHANA.</address>
+          </li>
+
+          <li>
+            <a href="mailto:ecodeportfolio@gmail.com" class="footer-link"
+              >joachimconsult@outlook.com</a
+            >
+          </li>
+
+          <li>
+            <a href="tel:+233533971928" class="footer-link"
+              >(+233) 20 711 1330<br />
+              (+233) 53 397 1928</a
+            >
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="h4 footer-list-title">Learn More</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our Story</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Projects</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms of Use</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+        </ul>
+
+        <div class="footer-list">
+          <p class="h4 footer-list-title" id="news">Our Newsletter</p>
+
+          <p class="footer-text">
+            Subscribe to our newsletter to get our news & deals delivered to
+            you.
+          </p>
+
+          <form action="" class="input-wrapper">
+            <input
+              type="email"
+              name="email_address"
+              placeholder="Email Address"
+              required
+              class="input-field"
+            />
+
+            <button type="submit" class="submit-btn">Join</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
