@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+      window.tailwind.config = {
+        darkMode: ['class'],
+        theme: {
+          extend: {
+            colors: {
+              border: 'hsl(var(--border))',
+              input: 'hsl(var(--input))',
+              ring: 'hsl(var(--ring))',
+              background: 'hsl(var(--background))',
+              foreground: 'hsl(var(--foreground))',
+              primary: {
+                DEFAULT: 'hsl(var(--primary))',
+                foreground: 'hsl(var(--primary-foreground))'
+              },
+              secondary: {
+                DEFAULT: 'hsl(var(--secondary))',
+                foreground: 'hsl(var(--secondary-foreground))'
+              },
+              destructive: {
+                DEFAULT: 'hsl(var(--destructive))',
+                foreground: 'hsl(var(--destructive-foreground))'
+              },
+              muted: {
+                DEFAULT: 'hsl(var(--muted))',
+                foreground: 'hsl(var(--muted-foreground))'
+              },
+              accent: {
+                DEFAULT: 'hsl(var(--accent))',
+                foreground: 'hsl(var(--accent-foreground))'
+              },
+              popover: {
+                DEFAULT: 'hsl(var(--popover))',
+                foreground: 'hsl(var(--popover-foreground))'
+              },
+              card: {
+                DEFAULT: 'hsl(var(--card))',
+                foreground: 'hsl(var(--card-foreground))'
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        :root {
+          --background: 0 0% 100%;
+          --foreground: 240 10% 3.9%;
+          --card: 0 0% 100%;
+          --card-foreground: 240 10% 3.9%;
+          --popover: 0 0% 100%;
+          --popover-foreground: 240 10% 3.9%;
+          --primary: 240 5.9% 10%;
+          --primary-foreground: 0 0% 98%;
+          --secondary: 240 4.8% 95.9%;
+          --secondary-foreground: 240 5.9% 10%;
+          --muted: 240 4.8% 95.9%;
+          --muted-foreground: 240 3.8% 46.1%;
+          --accent: 240 4.8% 95.9%;
+          --accent-foreground: 240 5.9% 10%;
+          --destructive: 0 84.2% 60.2%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 5.9% 90%;
+          --input: 240 5.9% 90%;
+          --ring: 240 5.9% 10%;
+          --radius: 0.5rem;
+        }
+        .dark {
+          --background: 240 10% 3.9%;
+          --foreground: 0 0% 98%;
+          --card: 240 10% 3.9%;
+          --card-foreground: 0 0% 98%;
+          --popover: 240 10% 3.9%;
+          --popover-foreground: 0 0% 98%;
+          --primary: 0 0% 98%;
+          --primary-foreground: 240 5.9% 10%;
+          --secondary: 240 3.7% 15.9%;
+          --secondary-foreground: 0 0% 98%;
+          --muted: 240 3.7% 15.9%;
+          --muted-foreground: 240 5% 64.9%;
+          --accent: 240 3.7% 15.9%;
+          --accent-foreground: 0 0% 98%;
+          --destructive: 0 62.8% 30.6%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 3.7% 15.9%;
+          --input: 240 3.7% 15.9%;
+          --ring: 240 4.9% 83.9%;
+        }
+      }
+    </style>
+    <title>About Us - Joachim’s Consult</title>
+    <meta name="title" content="About Us - Joachim’s Consult" />
+    <meta name="description" content="Learn more about Joachim’s Consult, our mission, and our team." />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="header" data-header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <h2 style="color: black; font-family: sans-serif">
+            <div style="font-weight: bold;
+          position: absolute;
+          top: 41%;
+          left: 30%;
+          transform: translate(-50%, -50%);
+          color:rgb(255, 255, 255);
+          font-size:24px;
+          font-weight: bold;
+          text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.829);">
+          Joachim’s Consult
+        </div>
+          <img src="./assets/images/logo1.jpg" width="70" height="70">
+          
+          </h2>
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="index.html" class="logo">
+              <h2 style="color: white; font-family: 'Times New Roman', Times, serif; font-weight: bold;">
+                Joachim’s Consult
+              </h2>
+            </a>
+
+            <button
+              class="nav-close-btn"
+              aria-label="close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link" style="color: rgb(119, 192, 240)"
+                >Home</a
+              >
+            </li>
+
+            <li>
+              <a href="about.html" class="navbar-link" style="color: rgb(119, 192, 240);">About</a>
+            </li>
+
+            <li>
+              <a href="projects.html" class="navbar-link" style="color: rgb(119, 192, 240)">Projects</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" style="color: rgb(119, 192, 240)">Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" style="color: rgb(119, 192, 240)">Contact</a>
+            </li>
+          </ul>
+
+          <div class="wrapper">
+            <a href="mailto:joachim@joachimsconsultingfirm.com" class="contact-link"
+              >joachim@joachimsconsultingfirm.com</a
+            >
+
+            <a href="tel:+233207111330" class="contact-link"
+              >+233207111330</a
+            >
+          </div>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkden"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.facebook.com/joachim.asamoah" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-dribbble"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="btn btn-primary">Join Us</a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <main style="margin-top: 70px;">
+      <article>
+        <section class="about" aria-labelledby="about-label">
+          <div class="container">
+            <figure class="about-banner">
+              <img
+                src="./assets/images/about-banner.png"
+                width="800"
+                height="580"
+                loading="lazy"
+                alt="about banner"
+                class="w-100"
+              />
+            </figure>
+
+            <div class="about-content">
+              <p class="section-subtitle" id="about-label">Why Choose Us?</p>
+
+              <h2 class="h2 section-title">
+                We bring solutions to make life easier for our clients.
+              </h2>
+
+              <ul>
+                <li class="about-item">
+                  <div class="accordion-card expanded" data-accordion>
+                    <h3 class="card-title">
+                      <button class="accordion-btn" data-accordion-btn>
+                        <ion-icon
+                          name="chevron-down-outline"
+                          aria-hidden="true"
+                          class="down"
+                        ></ion-icon>
+
+                        <spna class="span h5">Collaborative Approach</spna>
+                      </button>
+                    </h3>
+
+                    <p class="accordion-content">
+                      We view our clients as partners. Our collaborative process involves you at every stage,
+                       from initial concept to final delivery, 
+                      ensuring that the end result aligns
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-info" aria-labelledby="contact-info-label">
+          <div class="container">
+            <h2 class="h2 section-title" id="contact-info-label">Contact Information</h2>
+            <p class="section-text">
+              To learn more about Joachim's Consulting Firm's services or to schedule a consultation, please contact us at:
+            </p>
+            <ul class="contact-info-list">
+              <li>Address: Joachim's Consulting Firm, 123, Main Street, Kumasi, Ghana</li>
+            </ul>
+            <p class="section-text">
+              We look forward to hearing from you and exploring how we can support your organization's growth and success!
+            </p>
+          </div>
+        </section>
+      </article>
+    </main>
+
+  
+    <footer class="footer">
+        <div class="container grid-list">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <h2 style="color: white">Joachim’s Consult.</h2>
+            </a>
+  
+            <p class="footer-text">
+              &copy; 2023 Joachim’s Consult. <br />
+              All rights reserved.
+            </p>
+  
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-dribbble"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact-info">
+            <p class="footer-text">
+              To learn more about Joachim's Consulting Firm's services or to schedule a consultation:
+            </p>
+          
+          </div>
+          <ul class="footer-list">
+            <li>
+              <p class="h4 footer-list-title">Get in Touch</p>
+            </li>
+  
+            <li>
+              <address class="footer-text">ASAFO, KUMASI, GHANA.</address>
+            </li>
+  
+            <li>
+              <a href="mailto:joachim@joachimsconsultingfirm.com" class="footer-link"
+                >joachim@joachimsconsultingfirm.com</a
+              >
+            </li>
+  
+            <li>
+              <a href="tel:+233207111330" class="footer-link"
+                >(+233) 20 711 1330</a
+              >
+            </li>
+          </ul>
+  
+          <ul class="footer-list">
+            <li>
+              <p class="h4 footer-list-title">Learn More</p>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Our Story</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Projects</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Terms of Use</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Privacy Policy</a>
+            </li>
+          </ul>
+  
+          <div class="footer-list">
+            <p class="h4 footer-list-title" id="news">Our Newsletter</p>
+  
+            <p class="footer-text">
+              Subscribe to our newsletter to get our news & deals delivered to
+              you.
+            </p>
+  
+            <form action="" class="input-wrapper">
+              <input
+                type="email"
+                name="email_address"
+                placeholder="Email Address"
+                required
+                class="input-field"
+              />
+  
+              <button type="submit" class="submit-btn">Join</button>
+            </form>
+          </div>
+  
+          <div class="footer-contact-info">
+            <p class="footer-text">
+              We look forward to hearing from you and exploring how we can support your organization's growth and success!
+            </p>
+          </div>
+        </div>
+      </footer>
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
