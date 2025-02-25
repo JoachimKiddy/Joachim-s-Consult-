@@ -669,7 +669,7 @@ body.nav-active { overflow: hidden; }
   display: flex;
   align-items: center;
   gap: 4px;
-  color: var(--cadet-blue-crayola);
+  color: var (--cadet-blue-crayola);
   font-size: var(--fs-8);
 }
 
@@ -711,23 +711,55 @@ body.nav-active { overflow: hidden; }
   background-color: var(--charcoal);
   padding-block: 60px 100px;
   color: var(--light-gray);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.footer-brand .footer-text { margin-block: 20px; }
+.footer-brand {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-.footer .social-list { color: var(--white); }
+.footer-brand .logo {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-brand .footer-text {
+  margin-bottom: 20px;
+}
+
+.footer .social-list {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
 .footer-list-title {
+  font-size: var(--fs-5);
   color: var(--white);
-  margin-block-end: 16px;
+  margin-bottom: 10px;
 }
 
 .footer-link {
+  display: block;
   padding-block: 4px;
   transition: var(--transition-1);
 }
 
-.footer-link:is(:hover, :focus-visible) { color: var(--violet-blue-crayola); }
+.footer-link:is(:hover, :focus-visible) {
+  color: var(--violet-blue-crayola);
+}
 
 .input-wrapper {
   position: relative;
@@ -745,7 +777,9 @@ body.nav-active { overflow: hidden; }
   outline: none;
 }
 
-.input-field::placeholder { color: inherit; }
+.input-field::placeholder {
+  color: inherit;
+}
 
 .submit-btn {
   position: absolute;
@@ -757,6 +791,36 @@ body.nav-active { overflow: hidden; }
   color: var(--white);
   padding-inline: 24px;
   font-weight: var(--fw-700);
+}
+
+.footer-contact-info {
+  flex: 1 1 100%;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--light-gray);
+}
+
+.footer-contact-info .contact-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer-contact-info .contact-info-list li {
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .footer-brand,
+  .footer-list,
+  .footer-contact-info {
+    flex: 1 1 30%;
+    text-align: left;
+  }
+
+  .footer .social-list {
+    justify-content: flex-start;
+  }
 }
 
 
@@ -1107,4 +1171,148 @@ body.nav-active { overflow: hidden; }
 
   .feature-list { grid-template-columns: 1fr 1fr; }
 
+}
+
+/* New Section Styles */
+.section.proposal,
+.section.about-company,
+.section.table-of-contents,
+.section.executive-summary,
+.section.company-overview,
+.section.services-offered,
+.section.methodology,
+.section.benefits,
+.section.why-choose-us,
+.section.fees,
+.section.implementation-plan,
+.section.conclusion,
+.section.contact-information {
+  padding: 50px 0;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--fs-2);
+  margin-bottom: 20px;
+}
+
+.section-text,
+.contents-list,
+.services-list,
+.benefits-list,
+.fees-list,
+.implementation-plan-list,
+.contact-info-list {
+  font-size: var(--fs-6);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contents-list,
+.services-list,
+.benefits-list,
+.fees-list,
+.implementation-plan-list,
+.contact-info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contents-list li,
+.services-list li,
+.benefits-list li,
+.fees-list li,
+.implementation-plan-list li,
+.contact-info-list li {
+  margin-bottom: 10px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--violet-blue-crayola);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-circle);
+  padding: 10px;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.back-to-top.visible {
+  display: block;
+}
+
+.back-to-top:hover {
+  background-color: var(--charcoal);
+}
+
+/* Responsive Text Sizes */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: var(--fs-3);
+  }
+
+  .section-text,
+  .contents-list,
+  .services-list,
+  .benefits-list,
+  .fees-list,
+  .implementation-plan-list,
+  .contact-info-list {
+    font-size: var(--fs-7);
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: var(--fs-4);
+  }
+
+  .section-text,
+  .contents-list,
+  .services-list,
+  .benefits-list,
+  .fees-list,
+  .implementation-plan-list,
+  .contact-info-list {
+    font-size: var(--fs-8);
+  }
+}
+
+/* Animation Styles */
+.contact-info .section-title,
+.contact-info .section-text,
+.contact-info .contact-info-list {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-contact-info .footer-text,
+.footer-contact-info .contact-info-list {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
